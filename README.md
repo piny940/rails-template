@@ -1,5 +1,7 @@
 # Rails Template
 
+[日本語版README](https://github.com/piny940/rails-template/blob/main/README.ja.md)
+
 This is a Rails template for using Rails as an API backend.
 
 ## Technologies used

@@ -1,5 +1,7 @@
 # Rails Template
 
+[English version](https://github.com/piny940/rails-template/blob/main/README.md)
+
 API backendとしてRailsを使う場合のRailsのテンプレートです。
 
 ## 使用技術
