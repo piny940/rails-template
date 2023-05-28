@@ -1,24 +1,16 @@
-# README
+# Rails Template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails template for using Rails as an API backend.
 
-Things you may want to cover:
+## Technologies used
 
-* Ruby version
+We are using Ruby 3.1.2 and Rails 7.0.5.
 
-* System dependencies
+We use [postgresql](https://www.postgresql.org) for the database and Google Cloud Storage for storage.
 
-* Configuration
+Also, [Bootstrap5](https://getbootstrap.jp) and [Google Material Icon](https://fonts.google.com/icons) are used for appearance.
 
-* Database creation
+## Usage
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Place the `.env` file at the top level and follow the `.env.sample` to create a GCS service account key
+(JSON) and bucket name according to `.env.sample`.
