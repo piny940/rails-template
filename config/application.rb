@@ -20,5 +20,14 @@ module RailsTemplate
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators do |g|
+      g.system_tests = nil
+      g.jbuilder = false
+      g.assets = false
+      g.helper = false
+      g.template_engine = :haml
+    end
+    config.time_zone = 'Tokyo'
+    config.action_controller.forgery_protection_origin_check = false
   end
 end
