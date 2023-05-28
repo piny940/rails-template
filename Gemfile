@@ -83,3 +83,7 @@ gem 'dotenv-rails', groups: %i[development test]
 
 # CORS
 gem 'rack-cors'
+
+# ログイン
+gem 'devise'
+gem 'devise-i18n'
