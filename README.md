@@ -1,18 +1,18 @@
 # Rails Template
 
-[日本語版README](https://github.com/piny940/rails-template/blob/main/README.ja.md)
+[English version](https://github.com/piny940/rails-template/blob/main/README.en.md)
 
-This is a Rails template for using Rails as an API backend.
+API backendとしてRailsを使う場合のRailsのテンプレートです。
 
-## Technologies used
+## 使用技術
 
-We are using Ruby 3.1.2 and Rails 7.0.5.
+Ruby3.1.2、Rails7.0.5を使用しています。
 
-We use [postgresql](https://www.postgresql.org) for the database and Google Cloud Storage for storage.
+データベースには[postgresql](https://www.postgresql.org)、ストレージにはGoogle Cloud Storageを使用しています。
 
-Also, [Bootstrap5](https://getbootstrap.jp) and [Google Material Icon](https://fonts.google.com/icons) are used for appearance.
+また、見た目には[Bootstrap5](https://getbootstrap.jp)、[Google Material Icon](https://fonts.google.com/icons)を使用しています。
 
-## Usage
+## 使い方
 
-Place the `.env` file at the top level and follow the `.env.sample` to create a GCS service account key
-(JSON) and bucket name according to `.env.sample`.
+`.env`ファイルをトップレベルに配置し、`.env.sample`に従ってGCSのサービスアカウントのキー
+(JSON)およびバケット名を配置してください。
