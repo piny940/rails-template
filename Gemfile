@@ -87,3 +87,6 @@ gem 'rack-cors'
 # ログイン
 gem 'devise'
 gem 'devise-i18n'
+
+# テスト
+gem 'rspec-rails', groups: %i[development test]

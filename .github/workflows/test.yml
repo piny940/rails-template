@@ -34,6 +34,6 @@ jobs:
       - name: DB setup
         run: bundle exec rails db:setup
       - name: Run rails test
-        run: bundle exec rails test
+        run: bundle exec rspec
       - name: Run rubocop
         run: if (bundle exec rubocop -A) | grep -E "(corrected|\ W:\ )"; then exit 1; fi
