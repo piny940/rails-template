@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resource to: 'homes#show'
   end
+
+  namespace :api, defaults: { format: :json } do
+    resource :csrf, only: %i[show]
+    resource :session, only: %i[create destroy]
+  end
 end

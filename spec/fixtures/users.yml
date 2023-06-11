@@ -1,9 +1,11 @@
 one:
   email: test1@example.com
+  name: Test1
   password: password
   password_confirmation: password
 
 two:
   email: test2@example.com
+  name: Test2
   password: password
   password_confirmation: password
