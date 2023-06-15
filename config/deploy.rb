@@ -8,6 +8,9 @@ set :branch, "main"
 # sharedディレクトリに入れるファイルを指定
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
+# secrets.ymlをsharedに入れる設定
+set :linked_files, fetch(:linked_files, []).push('config/secrets.yml')
+
 # SSH接続設定
 set :ssh_options, {
   auth_methods: ['publickey'],
