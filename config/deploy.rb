@@ -3,6 +3,7 @@ lock '~> 3.17.3'
 
 set :application, 'rails_template'
 set :repo_url, 'git@github.com:piny940/rails-template.git'
+set :branch, "main"
 
 # sharedディレクトリに入れるファイルを指定
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
