@@ -145,6 +145,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.3)
+    kgio (2.11.4)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -216,6 +217,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
+    raindrops (0.20.1)
     rake (13.0.6)
     regexp_parser (2.8.0)
     reline (0.3.4)
@@ -280,6 +282,9 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    unicorn (6.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -328,6 +333,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   tzinfo-data
+  unicorn
   web-console
   webdrivers
 
