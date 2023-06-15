@@ -10,7 +10,8 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 # SSH接続設定
 set :ssh_options, {
   auth_methods: ['publickey'],
-  keys: ['~/.ssh/kagoya']
+  keys: ['~/.ssh/kagoya'],
+  verify_host_key: :never
 }
 
 # 保存しておく世代の設定
