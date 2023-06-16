@@ -3,7 +3,7 @@ lock '~> 3.17.3'
 
 set :application, 'rails_template'
 set :repo_url, 'git@github.com:piny940/rails-template.git'
-set :branch, "main"
+set :branch, 'main'
 
 # sharedディレクトリに入れるファイルを指定
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
@@ -24,6 +24,12 @@ set :keep_releases, 5
 # rbenvの設定
 set :rbenv_type, :user
 set :rbenv_ruby, '3.1.2'
+
+# Dotenv
+invoke 'dotenv:read'
+invoke 'dotenv:check'
+invoke 'dotenv:setup'
+set :env_file, ".env.#{stage}"
 
 # ここからUnicornの設定
 # Unicornのプロセスの指定
