@@ -8,16 +8,16 @@ worker_processes 2
 working_directory "#{root_path}"
 
 # プロセスIDの保存先を指定
-pid "#{root_path}/shared/tmp/pids/unicorn.pid"
+pid "/var/www/rails_template/shared/tmp/pids/unicorn.pid"
 
 # ポート番号を指定
-listen "#{root_path}/shared/tmp/sockets/unicorn.sock"
+listen "/var/www/rails_template/shared/tmp/sockets/unicorn.sock"
 
 # エラーのログを記録するファイルを指定
-stderr_path "#{root_path}/shared/log/unicorn.stderr.log"
+stderr_path "/var/www/rails_template/shared/log/unicorn.stderr.log"
 
 # 通常のログを記録するファイルを指定
-stdout_path "#{root_path}/shared/log/unicorn.stdout.log"
+stdout_path "/var/www/rails_template/shared/log/unicorn.stdout.log"
 
 # 応答時間を待つ上限時間を設定
 timeout 30
