@@ -24,7 +24,19 @@ set :keep_releases, 5
 # rbenvの設定
 set :rbenv_type, :user
 set :rbenv_ruby, '3.1.2'
-set :optional_env_vars, %w(BUNDLE_GEMFILE REDIS_URL RAILS_MAX_THREADS TEST_PG_USER TEST_PG_PASSWORD TEST_PG_HOST MY_APP_DATABASE_URL RAILS_MASTER_KEY RAILS_SERVE_STATIC_FILES RAILS_LOG_TO_STDOUT CI GOOGLE_APPLICATION_CREDENTIALS RAILS_MIN_THREADS RAILS_ENV PORT PIDFILE WEB_CONCURRENCY)
+set :optional_env_vars, %w[BUNDLE_GEMFILE REDIS_URL RAILS_MAX_THREADS TEST_PG_USER TEST_PG_PASSWORD TEST_PG_HOST MY_APP_DATABASE_URL RAILS_MASTER_KEY RAILS_SERVE_STATIC_FILES RAILS_LOG_TO_STDOUT CI GOOGLE_APPLICATION_CREDENTIALS RAILS_MIN_THREADS RAILS_ENV PORT PIDFILE WEB_CONCURRENCY]
+
+# Postgresql
+set :pg_without_sudo, false
+set :pg_host, 'db.133.18.236.168'
+set :pg_database, 'rails_template_production'
+set :pg_username, 'rails_template'
+# set :pg_generate_random_password, true
+# set :pg_ask_for_password, true
+set :pg_generate_random_password, true
+set :pg_extensions, %w[citext hstore]
+set :pg_encoding, 'UTF-8'
+set :pg_pool, '100'
 
 # Dotenv
 invoke 'dotenv:read'
