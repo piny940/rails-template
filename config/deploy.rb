@@ -26,10 +26,10 @@ set :rbenv_type, :user
 set :rbenv_ruby, '3.1.2'
 
 # Dotenv
+set :env_file, ".env.#{stage}"
 invoke 'dotenv:read'
 invoke 'dotenv:check'
 invoke 'dotenv:setup'
-set :env_file, ".env.#{stage}"
 
 # ここからUnicornの設定
 # Unicornのプロセスの指定
