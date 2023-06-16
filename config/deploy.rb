@@ -25,6 +25,12 @@ set :keep_releases, 5
 set :rbenv_type, :user
 set :rbenv_ruby, '3.1.2'
 
+# Dotenv
+invoke 'dotenv:read'
+invoke 'dotenv:check'
+invoke 'dotenv:setup'
+set :env_file, ".env.#{stage}"
+
 # ここからUnicornの設定
 # Unicornのプロセスの指定
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
