@@ -9,7 +9,7 @@ set :branch, 'main'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
 # secrets.ymlをsharedに入れる設定
-append :linked_files, "config/master.key", "config/database.yml"
+append :linked_files, "config/database.yml"
 set :linked_files, fetch(:linked_files, []).push('config/secrets.yml')
 
 # SSH接続設定
