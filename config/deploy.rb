@@ -26,7 +26,6 @@ set :rbenv_type, :user
 set :rbenv_ruby, '3.1.2'
 
 # Dotenv
-set :env_file, ".env.#{stages}"
 invoke 'dotenv:read'
 invoke 'dotenv:check'
 invoke 'dotenv:setup'
