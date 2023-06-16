@@ -105,3 +105,6 @@ gem 'rspec-rails', groups: %i[development test]
 
 # enumsの値を日本語化
 gem 'enum_help'
+
+# GCS
+gem 'gcs'
