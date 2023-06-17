@@ -1,6 +1,6 @@
 # rootパスのディレクトリを指定
 root_path = File.expand_path('..', __dir__)
-
+p root_path
 # アプリケーションサーバの性能を決定する
 worker_processes 2
 
@@ -8,16 +8,16 @@ worker_processes 2
 working_directory root_path.to_s
 
 # プロセスIDの保存先を指定
-pid "#{root_path}/../../shared/tmp/pids/unicorn.pid"
+pid "#{root_path}/../shared/tmp/pids/unicorn.pid"
 
 # ポート番号を指定
-listen "#{root_path}/../../shared/tmp/sockets/unicorn.sock"
+listen "#{root_path}/../shared/tmp/sockets/unicorn.sock"
 
 # エラーのログを記録するファイルを指定
-stderr_path "#{root_path}/../../shared/log/unicorn.stderr.log"
+stderr_path "#{root_path}/../shared/log/unicorn.stderr.log"
 
 # 通常のログを記録するファイルを指定
-stdout_path "#{root_path}/../../shared/log/unicorn.stdout.log"
+stdout_path "#{root_path}/../shared/log/unicorn.stdout.log"
 
 # 追記に記載してます。入れた方がいいです。
 ENV['BUNDLE_GEMFILE'] = root_path + "/Gemfile"
