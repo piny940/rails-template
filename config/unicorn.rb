@@ -20,7 +20,7 @@ stderr_path "#{root_path}/../../shared/log/unicorn.stderr.log"
 stdout_path "#{root_path}/../../shared/log/unicorn.stdout.log"
 
 # 追記に記載してます。入れた方がいいです。
-ENV['BUNDLE_GEMFILE'] = rails_root + "/Gemfile"
+ENV['BUNDLE_GEMFILE'] = root_path + "/Gemfile"
 
 # 応答時間を待つ上限時間を設定
 timeout 30
