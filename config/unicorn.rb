@@ -1,25 +1,26 @@
 # rootパスのディレクトリを指定
-rails_root = File.expand_path('../../', __FILE__)
+root_path = File.expand_path('..', __dir__)
 
 # アプリケーションサーバの性能を決定する
 worker_processes 2
 
-# 追記に記載してます。入れた方がいいです。
-ENV['BUNDLE_GEMFILE'] = rails_root + "/Gemfile"
-
 # アプリケーションの設置されているディレクトリを指定
-working_directory rails_root.to_s
+working_directory root_path.to_s
 
-# プロセスの停止などに必要なPIDファイルの保存先を指定。
-pid File.expand_path('../../tmp/pids/unicorn.pid', __FILE__)
+# プロセスIDの保存先を指定
+pid "#{root_path}/../../shared/tmp/pids/unicorn.pid"
 
 # ポート番号を指定
-# listen '/var/www/rails_template/shared/tmp/sockets/unicorn.sock'
-listen 8080
+listen "#{root_path}/../../shared/tmp/sockets/unicorn.sock"
 
-# Unicornのエラーログと通常ログの位置を指定。
-stderr_path File.expand_path('../../log/unicorn_stderr.log', __FILE__)
-stdout_path File.expand_path('../../log/unicorn_stdout.log', __FILE__)
+# エラーのログを記録するファイルを指定
+stderr_path "#{root_path}/../../shared/log/unicorn.stderr.log"
+
+# 通常のログを記録するファイルを指定
+stdout_path "#{root_path}/../../shared/log/unicorn.stdout.log"
+
+# 追記に記載してます。入れた方がいいです。
+ENV['BUNDLE_GEMFILE'] = rails_root + "/Gemfile"
 
 # 応答時間を待つ上限時間を設定
 timeout 30
