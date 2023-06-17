@@ -11,7 +11,7 @@ working_directory root_path.to_s
 pid '/var/www/rails_template/shared/tmp/pids/unicorn.pid'
 
 # ポート番号を指定
-listen 8000
+listen '/var/www/rails_template/shared/tmp/sockets/unicorn.sock'
 
 # エラーのログを記録するファイルを指定
 stderr_path '/var/www/rails_template/shared/log/unicorn.stderr.log'
