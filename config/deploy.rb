@@ -30,7 +30,7 @@ set :optional_env_vars, %w[RAILS_TEMPLATE_DATABASE_PASSWORD BUNDLE_GEMFILE REDIS
 set :pg_without_sudo, false
 set :pg_host, 'db.piny940.com'
 set :pg_database, 'rails_template_production'
-set :pg_username, 'rails_template'
+set :pg_username, 'ansai'
 # set :pg_generate_random_password, true
 # set :pg_ask_for_password, true
 set :pg_generate_random_password, true
