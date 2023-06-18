@@ -37,24 +37,3 @@ set :pg_generate_random_password, true
 set :pg_extensions, %w[citext hstore]
 set :pg_encoding, 'UTF-8'
 set :pg_pool, '100'
-
-# 環境変数
-# set :default_env, {
-#   GOOGLE_JSON: ENV['GOOGLE_JSON'],
-#   GOOGLE_BUCKET: ENV['GOOGLE_BUCKET'],
-# }
-
-# ここからUnicornの設定
-# Unicornのプロセスの指定
-set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
-
-# Unicornの設定ファイルの指定
-set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
-
-# Unicornを再起動するための記述
-after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
-    invoke 'unicorn:restart'
-  end
-end
