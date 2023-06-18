@@ -5,5 +5,6 @@ class HomesController < ApplicationController
     p ENV['PATH']
     p ENV['RAILS_ENV']
     p ENV['USER']
+    p ENV['BUNDLE_GEMFILE']
   end
 end
