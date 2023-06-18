@@ -56,5 +56,8 @@ after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
+    on roles(:app) do
+      execute "source /etc/profile"
+    end
   end
 end
