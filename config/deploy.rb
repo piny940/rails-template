@@ -39,10 +39,10 @@ set :pg_encoding, 'UTF-8'
 set :pg_pool, '100'
 
 # 環境変数
-set :default_env, {
-  GOOGLE_JSON: ENV['GOOGLE_JSON'],
-  GOOGLE_BUCKET: ENV['GOOGLE_BUCKET'],
-}
+# set :default_env, {
+#   GOOGLE_JSON: ENV['GOOGLE_JSON'],
+#   GOOGLE_BUCKET: ENV['GOOGLE_BUCKET'],
+# }
 
 # ここからUnicornの設定
 # Unicornのプロセスの指定
